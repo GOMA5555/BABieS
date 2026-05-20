@@ -1,0 +1,427 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #e9e9e9;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      color: #000;
+      overflow-x: hidden;
+      touch-action: manipulation;
+    }
+
+    /* スマホ幅固定 */
+    .container {
+      width: 100%;
+      max-width: 375px;
+      min-height: 100vh;
+      background: #d9d9d9;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section {
+      width: 100%;
+    }
+
+    /* =========================
+       ハンバーガーメニュー
+    ========================= */
+
+    header {
+      width: 100%;
+      max-width: 375px;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      padding: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hamburger {
+      width: 45px;
+      height: 45px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      touch-action: manipulation;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    .hamburger span {
+      width: 22px;
+      height: 2px;
+      background: #000;
+      transition: .3s;
+    }
+
+    /* メニュー */
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 375px;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      z-index: 999;
+      transition: .4s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .menu.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .menu ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    .menu li {
+      margin: 30px 0;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: bold;
+      transition: .3s;
+      display: inline-block;
+      padding: 10px 20px;
+      touch-action: manipulation;
+    }
+
+    .menu a:hover {
+      opacity: .7;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 100px 25px 40px;
+      text-align: center;
+      background: #d9d9d9;
+    }
+
+    .logo-circle {
+      width: 280px;
+      height: 280px;
+      background: #b9d651;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-circle img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .brand-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    .brand-sub {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    /* スクロールボタン */
+
+    .scroll-btn {
+      margin-top: 40px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      gap: 10px;
+      animation: float 1.5s infinite;
+    }
+
+    .scroll-circle {
+      width: 45px;
+      height: 45px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(8px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================
+       CONCEPT
+    ========================= */
+
+    .concept {
+      background: #cfcfcf;
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 35px;
+    }
+
+    .concept-text {
+      text-align: left;
+      line-height: 2;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    /* =========================
+   自動スライド
+========================= */
+
+.slides {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  /* 追加 */
+  scroll-snap-stop: always;
+}
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    .products {
+      padding: 60px 20px;
+      text-align: center;
+      background: #d9d9d9;
+    }
+
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 30px;
+    }
+
+    .slides {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 10px;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    .slides::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product-card {
+      min-width: 320px;
+      height: 430px;
+      background: repeating-conic-gradient(
+        #efefef 0% 25%,
+        #dddddd 0% 50%
+      )
+      50% / 40px 40px;
+      border: 3px solid #000;
+      border-radius: 35px;
+      scroll-snap-align: center;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .product-card:hover {
+      transform: scale(0.98);
+    }
+    .product-card:active {
+      transform: scale(0.96);
+    }
+
+    /* =========================
+       POPUP
+    ========================= */
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+      z-index: 2000;
+    }
+
+    .popup.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .popup-content {
+      width: 90%;
+      max-width: 320px;
+      background: white;
+      border-radius: 25px;
+      padding: 25px;
+      text-align: center;
+      position: relative;
+      animation: popup .3s ease;
+    }
+
+    @keyframes popup {
+      from {
+        transform: scale(.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .popup-image {
+      width: 100%;
+      height: 220px;
+      background: #ddd;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .popup-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .popup-text {
+      line-height: 1.8;
+      font-size: .95rem;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 15px;
+      right: 18px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .dot {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #000;
+      border-radius: 50%;
+    }
+
+    .dot.active {
+      background: #000;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #cfcfcf;
+      padding: 50px 20px 60px;
+      text-align: center;
+    }
+
+    .sns {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 50px;
+    }
+
+    .sns a {
+      color: #fff;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .sns a:hover {
+      transform: scale(1.1);
+    }
+
+    .footer-title {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+
+    .footer-name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 5px;
+    }
