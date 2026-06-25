@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BABieS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="MENU" id="menu">
+        <input type="checkbox" id="menu-toggle">
+        <label class="hamburger" for="menu-toggle" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>
+            <li><a href="#top">TOP</a></li>
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#products">PRODUCTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <a class="top-button" href="#top" aria-label="トップへ戻る">
+        <span></span>
+    </a>
+
+    <main>
+        <section class="top" id="top">
+            <div class="top-title">
+                <h2>バビーズ</h2>
+                <h1>BABieS</h1>
+            </div>
+            <img src="images/logo.png" alt="BaBieS Logo" class="logo">
+        </section>
+
+        <section class="concept" id="concept">
+            <h1>CONCEPT</h1>
+            <h2>大人だけど、まだまだ心は子供！</h2>
+            <p>
+                大人になると「好きな服を我慢しなくちゃ」<br>
+                「この服が着たいけど他の人にどう見られるかな」
+            </p>
+            <p>
+                そんな悩みがたくさん増えちゃう。でも、<br>
+                大人になるって子供の頃のワクワクを捨てちゃうの？
+            </p>
+            <p>
+                好きな色、好きな柄、好きな服を着る。<br>
+                いつだって何歳になったって心はときめかせていい。
+            </p>
+            <p>
+                このブランドは、心に残る子供心をくすぶって、<br>
+                ”子供の時に出会ったあのトキメキ”を与えるブランド。
+            </p>
+        </section>
+
+        <section class="news" id="news">
+            <h1>NEWS</h1>
+            <div class="news-item">
+                <h2>2026.06.25</h2>
+                <p>新商品「BABieS Tee」発売開始！</p>
+            </div>
+            <div class="news-item">
+                <h2>2026.05.15</h2>
+                <p>公式Instagramアカウント開設しました！</p>
+            </div>
+            <div class="news-item">
+                <h2>2026.04.20</h2>
+                <p>公式サイトがリニューアルオープン！</p>
+            </div>
+
+        </section>
+
+        <section class="products" id="products">
+            <h1>PRODUCTS</h1>
+            <div class="product-slider-menu">
+                <button class="product-button" type="button" id="product-open">
+                    <div class="product-track" id="product-track">
+                        <img src="images/product-1.png" alt="商品メニュー1" class="product-menu" draggable="false">
+                        <img src="images/product-2.png" alt="商品メニュー2" class="product-menu" draggable="false">
+                        <img src="images/product-3.png" alt="商品メニュー3" class="product-menu" draggable="false">
+                        <img src="images/product-4.png" alt="商品メニュー4" class="product-menu" draggable="false">
+                        <img src="images/product-5.png" alt="商品メニュー5" class="product-menu" draggable="false">
+                        <img src="images/product-1.png" alt="商品メニュー1" class="product-menu" draggable="false">
+                    </div>
+                </button>
+                <div class="slider-dots" aria-label="商品メニュー切り替え">
+                    <button class="slider-dot is-active" type="button" data-slide="0" aria-label="1枚目の商品を見る"></button>
+                    <button class="slider-dot" type="button" data-slide="1" aria-label="2枚目の商品を見る"></button>
+                    <button class="slider-dot" type="button" data-slide="2" aria-label="3枚目の商品を見る"></button>
+                    <button class="slider-dot" type="button" data-slide="3" aria-label="4枚目の商品を見る"></button>
+                    <button class="slider-dot" type="button" data-slide="4" aria-label="5枚目の商品を見る"></button>
+                </div>
+            </div>
+        </section>
+
+        <div class="product-popup" id="product-popup" aria-hidden="true">
+            <div class="product-detail">
+                <button class="popup-close" type="button" id="product-close" aria-label="閉じる"></button>
+                <div class="product-detail-item is-active" data-product="0">
+                    <h2>BABieS Tee</h2>
+                    <img src="images/product-1.png" alt="商品写真1" class="popup-product-image">
+                    <p class="product-price">3980yen</p>
+                    <p>定番Tシャツ！</p>
+                    <p>ショート丈でカジュアルに着られるデザインです。</p>
+                </div>
+                <div class="product-detail-item" data-product="1">
+                    <h2>BABieS Hoodie</h2>
+                    <img src="images/product-2.png" alt="商品写真2" class="popup-product-image">
+                    <p class="product-price">5980yen</p>
+                    <p>冬に大活躍するフーディー！</p>
+                    <p>シンプルで使いやすいデザインです。</p>
+                </div>
+                <div class="product-detail-item" data-product="2">
+                    <h2>BABieS onepiece</h2>
+                    <img src="images/product-3.png" alt="商品写真3" class="popup-product-image">
+                    <p class="product-price">6980yen</p>
+                    <p>定番ワンピース！</p>
+                    <p>さらっと着れるデザインで、夏にぴったりです。</p>
+                </div>
+                <div class="product-detail-item" data-product="3">
+                    <h2>BABieS アクリルキーホルダー</h2>
+                    <img src="images/product-4.png" alt="商品写真4" class="popup-product-image">
+                    <p class="product-price">980yen</p>
+                    <p>ロゴのアクリルキーホルダー！</p>
+                    <p>BABieSちゃんとどこでもお出かけに行けます。</p>
+                </div>
+                <div class="product-detail-item" data-product="4">
+                    <h2>BABieSちゃん ピアス</h2>
+                    <img src="images/product-5.png" alt="商品写真5" class="popup-product-image">
+                    <p class="product-price">2980yen</p>
+                    <p>BABieSちゃんとお揃い！なピアス</p>
+                    <p>BABieSちゃんのオリジナルデザインのピアスです。</p>
+                </div>
+            </div>
+        </div>
+
+        <footer id="contact">
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <svg class="dot-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16.6 5.8c1.1.8 2.3 1.3 3.8 1.4v3.4c-1.4 0-2.7-.4-3.8-1.1v5.6c0 3.1-2.5 5.6-5.6 5.6S5.4 18.2 5.4 15.1s2.5-5.6 5.6-5.6c.4 0 .8 0 1.1.1v3.6c-.3-.1-.7-.2-1.1-.2-1.2 0-2.1.9-2.1 2.1s.9 2.1 2.1 2.1 2.1-.9 2.1-2.1V3.3h3.5v2.5z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg class="dot-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                        <circle cx="12" cy="12" r="4" />
+                        <circle cx="17" cy="7" r="1" />
+                    </svg>
+                </a>
+            </div>
+            <h1>BABieS</h1>
+            <h2 >@Miu GOTO</h2>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
